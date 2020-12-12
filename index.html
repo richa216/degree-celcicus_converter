@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fahrenheit to celcius converter</title>
+
+	<style type="text/css">
+		
+
+		.container 
+		{
+			text-align: center;
+			padding-top: 30%;
+			padding-bottom: 30%;
+			margin-left: 30%;
+			margin-right: 30%;
+
+
+		}
+
+
+		.converter1
+		{
+			border:2px solid grey;
+			height: auto;
+			width: 100%;
+			background-color: grey;
+			border-radius: 10px;
+			
+		}
+
+
+		.converter1 h2
+		{
+			text-transform: uppercase;
+			background-color: lightyellow;
+			border-radius: 10px;
+
+		}
+
+		.converter1 input
+		{
+			border-radius: 5px;
+			border:none;
+			height: 30px;
+
+		}
+
+
+	</style>
+</head>
+<body>
+  <div class="container ">
+  	<div class=" converter1" >
+  		<h2>Temperature Converter</h2>
+  	
+    <form onsubmit='event.preventDefault()' return false;>
+    	
+    	<select id="option1" style="width:90px;height:40px;border-radius: 5px;border:none;">
+    		<option value="1" >Celcius</option>
+    		<option value="2" >Fahrenheit</option>
+
+    	</select>
+
+	    <input type="submit"  onclick="show1()" value="convert" style="background-color: green;width:90px;height:40px;border:none;box-shadow: 5px 2px darkgreen;"><br><br>
+
+	    <input type="number" name="textbox" id="input" step="any"><br><br>
+	    <input type="text" name="textbox" id="input1"><br><br>
+
+    </form>
+
+  </div>
+</div>
+
+
+	<script>
+		
+		function show1()
+		{  var  x = parseFloat(document.getElementById('input').value);
+			 var z=document.getElementById('option1').value;
+
+			
+			if(z=="2")
+			{
+		       
+				
+		        var f = (x*(9/5)+32);
+		        console.log(f);
+			    document.getElementById('input1').value = f;
+			    
+		    }
+
+		    else
+		    {
+		    	
+		    	 var c=(x-32)*(5/9);
+		    	document.getElementById('input1').value = c;
+		    }
+		}
+	</script>
+
+</body>
+</html>
